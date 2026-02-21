@@ -1,8 +1,8 @@
 package card
 
 import (
-	"bankhw/types"
 	"fmt"
+	"github.com/GamerMina/Homework/types"
 )
 
 const withdrawLimit = 20_000_00
@@ -11,7 +11,7 @@ const depositLimit = 50_000_00
 func IssueCard(currency types.Currrency, color string, name string) types.Card {
 	return types.Card{
 		Id:       1000,
-		Pan:      "5058 0000 0000 0001",
+		Pan:      "5058 0000 0000 00x01",
 		Balance:  0,
 		Currency: currency,
 		Color:    color,
@@ -82,9 +82,9 @@ func MaxPaymentReturn(payment []types.Payment) {
 func MaxPayment(payment []types.Payment) types.Payment {
 	var max types.Payment
 	max.Amount = 0
-	for i := 0;  i< len(payment); i++ {
+	for i := 0; i < len(payment); i++ {
 		if max.Amount < payment[i].Amount {
-			max = payment [i]
+			max = payment[i]
 		}
 	}
 	return max
