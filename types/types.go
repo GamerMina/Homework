@@ -13,7 +13,6 @@ type DepositInfo struct {
 	Currency       string
 	StartOfPayment string
 }
-type Category string
 
 type Card struct {
 	Id         int
@@ -28,16 +27,16 @@ type Card struct {
 type Currrency string
 type Money int64
 type PAN string
-type PaymentCategory string
-type PaymentStatus string
+type Category string
+type Status string
 type Phone string
 
 type Payment struct {
 	ID        string
 	AccountID int
 	Amount    Money
-	Category  PaymentCategory
-	Status    PaymentStatus
+	Category  Category
+	Status    Status
 }
 type Account struct {
 	ID      int64
@@ -46,7 +45,7 @@ type Account struct {
 }
 
 const (
-	PaymentStatsOk         PaymentStatus = "OK"
-	PaymentStatsFail       PaymentStatus = "Fail"
-	PaymentStatsInProgress PaymentStatus = "InProgress"
+	StatsOk         Status = "OK"
+	StatsFail       Status = "Fail"
+	StatsInProgress Status = "InProgress"
 )
