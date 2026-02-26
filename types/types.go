@@ -39,7 +39,7 @@ type Payment struct {
 	Status    Status
 }
 type Account struct {
-	ID      int64
+	ID      int
 	Phone   Phone
 	Balance Money
 }
