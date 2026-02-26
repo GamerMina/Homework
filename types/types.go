@@ -13,6 +13,7 @@ type DepositInfo struct {
 	Currency       string
 	StartOfPayment string
 }
+type Category string
 
 type Card struct {
 	Id         int
